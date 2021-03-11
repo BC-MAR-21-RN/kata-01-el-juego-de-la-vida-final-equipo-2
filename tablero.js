@@ -1,13 +1,10 @@
 class Tablero {
     constructor(filas, columnas) {
+        this.estado = { vivo: '*', muerto: '.' }
         this.filas = filas;
         this.columnas = columnas;
         this.matriz = [];
 
-    }
-
-    regresarVerdadero() {
-        return true
     }
 
     generar() {
@@ -15,9 +12,8 @@ class Tablero {
             this.matriz[fila] = [];
             for (let columna = 0; columna < this.columnas; columna++) {
                 this.matriz[fila][columna] = "";
-                //TypeError: Cannot set property '0' of undefined
-            }
 
+            }
         }
 
         return this.matriz
@@ -26,7 +22,8 @@ class Tablero {
     llenar() {
         for (let fila = 0; fila < this.filas; fila++) {
             for (let columna = 0; columna < this.columnas; columna++) {
-                this.matriz[fila][columna] = Math.floor(Math.random() * 2);
+                this.matriz[fila][columna] = Math.random(Math.floor() * estado.length);
+
             }
         }
 
@@ -35,6 +32,7 @@ class Tablero {
 
 
     imprimir() {
+        this.estado
         return console.table(matriz);
     }
 
