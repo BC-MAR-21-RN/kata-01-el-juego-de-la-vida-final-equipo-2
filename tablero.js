@@ -22,20 +22,25 @@ class Tablero {
     llenar() {
         for (let fila = 0; fila < this.filas; fila++) {
             for (let columna = 0; columna < this.columnas; columna++) {
-                this.matriz[fila][columna] = Math.random(Math.floor() * estado.length);
-
+                let keys = Object.keys(this.estado)
+                this.matriz[fila][columna] = this.estado[keys[keys.length * Math.random() << 0]]
+                    //https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object
             }
         }
-
         return this.matriz
     }
 
 
     imprimir() {
-        this.estado
-        return console.table(matriz);
+        return console.table(this.matriz);
     }
 
 };
+
+miTablero = new Tablero(3, 3)
+miTablero.generar()
+miTablero.llenar()
+miTablero.imprimir()
+
 
 module.exports = Tablero
