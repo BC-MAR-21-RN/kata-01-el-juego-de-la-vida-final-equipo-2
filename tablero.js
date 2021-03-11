@@ -4,7 +4,6 @@ class Tablero {
         this.filas = filas;
         this.columnas = columnas;
         this.matriz = [];
-
     }
 
     generar() {
@@ -32,7 +31,8 @@ class Tablero {
 
 
     imprimir() {
-        return console.table(this.matriz);
+        console.table(this.matriz)
+        return true
     }
 
 };

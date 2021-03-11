@@ -6,6 +6,17 @@ TO DO:
 4. Contamos los vecinos () y hacemos pruebas del contado ()
 5. Si es el caso, cambiamos el estado () y hacemos pruebas ()
 
+Juego de la vida 
+-Atributos --Clases *Metodos
+ --Tablero(Generado) --Celulas -- GestorDeReglas -- app.js
+
+ --Celula -Estado -Coordenas
+ --Celula *CambiarDeEstado
+ 
+ -- GestorDeReglas(Tablero, Celula)
+ -- GestorDeReglas *contarVecinosVivos
+ 
+ https://www.theodinproject.com/courses/javascript/lessons/battleship
 */
 
 /*
