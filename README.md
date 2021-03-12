@@ -1,6 +1,6 @@
 ![BrightCoders Logo](img/logo-bc.png)
 
-![Code Climate](img/Captura.png)
+![Code Climate](img/Captura.PNG)
 
 
 # Kata El Juego de la Vida
