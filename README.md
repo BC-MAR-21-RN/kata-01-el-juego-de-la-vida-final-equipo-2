@@ -1,5 +1,8 @@
 ![BrightCoders Logo](img/logo-bc.png)
 
+![Code Climate](img/Captura.png)
+
+
 # Kata El Juego de la Vida
 ![cover](img/cover.jpg)
 <span>Photo by <a href="https://unsplash.com/@anubhav?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anubhav Saxena</a> on <a href="https://unsplash.com/s/photos/life?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
