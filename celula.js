@@ -1,14 +1,14 @@
 export class Celula {
     constructor() {
-        this.estados = { vivo: '*', muerto: '.' }
-        this.estadoActual = this.establecerMuerto()
+        this.estados = { vivo: "*", muerto: "." };
+        this.estadoActual = this.establecerMuerto();
     }
 
     establecerVivo() {
-        return this.estados.vivo // '*'
+        return this.estados.vivo;
     }
 
     establecerMuerto() {
-        return this.estados.muerto // '.'
+        return this.estados.muerto;
     }
 }
