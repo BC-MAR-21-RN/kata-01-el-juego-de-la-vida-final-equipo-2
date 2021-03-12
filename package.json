@@ -1,0 +1,32 @@
+{
+    "name": "kata-01-el-juego-de-la-vida-final-equipo-2",
+    "version": "1.0.0",
+    "description": "![BrightCoders Logo](img/logo-bc.png)",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BC-MAR-21-RN/kata-01-el-juego-de-la-vida-final-equipo-2.git"
+    },
+    "transform": {
+        "^.+\\.jsx?$": "babel-jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/BC-MAR-21-RN/kata-01-el-juego-de-la-vida-final-equipo-2/issues"
+    },
+    "homepage": "https://github.com/BC-MAR-21-RN/kata-01-el-juego-de-la-vida-final-equipo-2#readme",
+    "devDependencies": {
+        "@babel/preset-env": "^7.13.10",
+        "babel-jest": "^26.6.3",
+        "jest": "^26.6.3",
+        "jest-tobetype": "^1.2.3"
+    },
+    "dependencies": {
+        "eslint": "^7.21.0"
+    }
+}

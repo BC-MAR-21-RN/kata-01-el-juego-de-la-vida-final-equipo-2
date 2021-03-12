@@ -11,8 +11,4 @@ export class Celula {
     establecerMuerto() {
         return this.estados.muerto // '.'
     }
-
-    establecerEstadoActual(estado) {
-        this.estadoActual = this.estados.estado
-    }
 }
