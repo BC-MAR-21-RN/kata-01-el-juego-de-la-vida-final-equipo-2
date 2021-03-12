@@ -9,27 +9,26 @@ export class GestorDeJuego {
     contarVecinos(x, y) {
         let contadorCelulasVivas = 0
 
-        //1
-        contadorCelulasVivas += this.tryCatcher(x - 1, y - 1)
+        contadorCelulasVivas += this.validarVecino(x - 1, y - 1)
             //2
-        contadorCelulasVivas += this.tryCatcher(x - 1, y)
+        contadorCelulasVivas += this.validarVecino(x - 1, y)
             //3
-        contadorCelulasVivas += this.tryCatcher(x - 1, y + 1)
+        contadorCelulasVivas += this.validarVecino(x - 1, y + 1)
             //4
-        contadorCelulasVivas += this.tryCatcher(x, y - 1)
+        contadorCelulasVivas += this.validarVecino(x, y - 1)
             //5
-        contadorCelulasVivas += this.tryCatcher(x, y + 1)
+        contadorCelulasVivas += this.validarVecino(x, y + 1)
             //6
-        contadorCelulasVivas += this.tryCatcher(x + 1, y - 1)
+        contadorCelulasVivas += this.validarVecino(x + 1, y - 1)
             //7
-        contadorCelulasVivas += this.tryCatcher(x + 1, y)
+        contadorCelulasVivas += this.validarVecino(x + 1, y)
             //8
-        contadorCelulasVivas += this.tryCatcher(x + 1, y + 1)
+        contadorCelulasVivas += this.validarVecino(x + 1, y + 1)
 
         return contadorCelulasVivas
     }
 
-    tryCatcher(x, y) {
+    validarVecino(x, y) {
         try {
             if (this.tablero.matriz[x][y] == (new Celula()).establecerVivo()) {
                 return 1
@@ -45,13 +44,22 @@ export class GestorDeJuego {
 
     aplicarReglas(celulasVivas, x, y) {
         if ((this.tablero.matriz[x][y] == new Celula().establecerVivo()) && (celulasVivas < 2 || celulasVivas > 3)) {
-            this.tablero.matrizSiguiente[x][y] = new Celula().establecerMuerto()
+            this.cambiarEstadoDeCelula(new Celula().establecerMuerto(), x, y)
+
         } else if ((this.tablero.matriz[x][y] == new Celula().establecerVivo()) && (celulasVivas == 2 || celulasVivas == 3)) {
-            this.tablero.matrizSiguiente[x][y] = new Celula().establecerVivo() //pendiente
+            this.cambiarEstadoDeCelula(new Celula().establecerVivo(), x, y)
+
         } else
         if ((this.tablero.matriz[x][y] == new Celula().establecerMuerto()) && celulasVivas == 3) {
-            this.tablero.matrizSiguiente[x][y] = new Celula().establecerVivo()
+            this.cambiarEstadoDeCelula(new Celula().establecerVivo(), x, y)
+
         }
+
+        return this.tablero.matrizSiguiente
+    }
+
+    cambiarEstadoDeCelula(estado, x, y) {
+        this.tablero.matrizSiguiente[x][y] = estado
     }
 
     generarNuevaGeneración() {

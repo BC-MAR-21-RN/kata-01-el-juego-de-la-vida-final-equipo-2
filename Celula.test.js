@@ -13,9 +13,5 @@ test('Establecer celula a muerta', () => {
     expect(celulaTest.establecerMuerto()).toBe('.')
 });
 
-test('Establecer estado de la celula', () => {
-    expect(celulaTest.establecerMuerto()).toBe('.')
-});
 
-
-//https://github.com/facebook/jest/issues/9395#issuecomment-583799300
+//https://github.com/facebook/jest/issuesd/9395#issuecomment-583799300ddddd
