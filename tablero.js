@@ -4,19 +4,21 @@ export class Tablero {
     constructor(filas, columnas) {
         this.filas = filas;
         this.columnas = columnas;
-        this.matriz = [];
+        this.matriz = this.generar();
+        this.matrizSiguiente = this.generar()
     }
 
     generar() {
+        let matriz = []
         for (let fila = 0; fila < this.filas; fila++) {
-            this.matriz[fila] = [];
+            matriz[fila] = [];
             for (let columna = 0; columna < this.columnas; columna++) {
-                this.matriz[fila][columna] = "";
+                matriz[fila][columna] = (new Celula()).establecerMuerto();
 
             }
         }
 
-        return this.matriz
+        return matriz
     }
 
     llenar() {
@@ -37,10 +39,4 @@ export class Tablero {
     }
 
 };
-
-let miTablero = new Tablero(3, 3)
-miTablero.generar()
-miTablero.llenar()
-miTablero.imprimir()
-
 //module.exports = Tablero

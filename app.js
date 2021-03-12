@@ -1,3 +1,17 @@
+import { GestorDeJuego } from './gestor.js'
+
+
+let primeraMatriz = new GestorDeJuego(10, 10)
+primeraMatriz.tablero.llenar()
+primeraMatriz.tablero.imprimir()
+
+
+setInterval(function() {
+    primeraMatriz.generarNuevaGeneración();
+    primeraMatriz.tablero.imprimir()
+
+}, 4000);
+
 /**
 TO DO:
 1. Hacemos pruebas (creation.test.js) y generamos la matriz (creation.js). 
