@@ -10,14 +10,16 @@ Juego de la vida
 -Atributos --Clases *Metodos
  --Tablero(Generado) --Celulas -- GestorDeReglas -- app.js
 
- --Celula -Estado -Coordenas
+ --Celula -Estado -Coordenas 
  --Celula *CambiarDeEstado
  
  -- GestorDeReglas(Tablero, Celula)
  -- GestorDeReglas *contarVecinosVivos
- 
+
+ -- https://docs.codeclimate.com/docs/workflow 
  https://www.theodinproject.com/courses/javascript/lessons/battleship
 */
+
 
 /*
 SOLID

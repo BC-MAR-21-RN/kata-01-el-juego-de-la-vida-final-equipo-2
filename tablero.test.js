@@ -1,5 +1,7 @@
 const { expect } = require("@jest/globals")
-const Tablero = require('./tablero.js')
+const { Tablero } = require('./tablero.js')
+    //const Tablero = require('./tablero.js')
+const Celula = require('./celula.js')
 
 
 let juegoNuevo = new Tablero(3, 3)
