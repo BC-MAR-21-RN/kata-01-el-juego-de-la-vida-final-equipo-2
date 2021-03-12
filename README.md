@@ -1,6 +1,6 @@
 ![BrightCoders Logo](img/logo-bc.png)
 
-![Code Climate](img/Captura.PNG)
+
 
 
 # Kata El Juego de la Vida
@@ -86,3 +86,5 @@ Generation 2:
 - [Getting Started With Jest](https://www.valentinog.com/blog/jest/) 
 - [Testing JavaScript with Jest](https://flaviocopes.com/jest/)
 
+## Resultados Code Climate
+![Code Climate](img/Captura.PNG)
