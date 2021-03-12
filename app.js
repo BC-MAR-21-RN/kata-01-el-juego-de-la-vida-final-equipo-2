@@ -6,11 +6,11 @@ primeraMatriz.tablero.llenar()
 primeraMatriz.tablero.imprimir()
 
 
-setInterval(function() {
-    primeraMatriz.generarNuevaGeneración();
-    primeraMatriz.tablero.imprimir()
+//setInterval(function() {
+primeraMatriz.generarNuevaGeneración();
+primeraMatriz.tablero.imprimir()
 
-}, 4000);
+//}, 4000);
 
 /**
 TO DO:

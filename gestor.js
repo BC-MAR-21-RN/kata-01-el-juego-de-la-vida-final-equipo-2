@@ -41,19 +41,45 @@ export class GestorDeJuego {
     }
 
 
+    /*
+    if (this.sum < 2 || this.sum > 3) {
+                        item.value = 0
+                    }
+                    if (this.sum === 3) {
+                        item.value = 1
+                    }
 
+    */
     aplicarReglas(celulasVivas, x, y) {
-        if ((this.tablero.matriz[x][y] == new Celula().establecerVivo()) && (celulasVivas < 2 || celulasVivas > 3)) {
+
+        /*
+                if ((this.tablero.matriz[x][y] == new Celula().establecerVivo()) && (celulasVivas < 2 || celulasVivas > 3)) {
+                    this.cambiarEstadoDeCelula(new Celula().establecerMuerto(), x, y)
+
+                } else if ((this.tablero.matriz[x][y] == new Celula().establecerVivo()) && (celulasVivas == 2 || celulasVivas == 3)) {
+                    this.cambiarEstadoDeCelula(new Celula().establecerVivo(), x, y)
+
+                } else
+                if ((this.tablero.matriz[x][y] == new Celula().establecerMuerto()) && celulasVivas == 3) {
+                    this.cambiarEstadoDeCelula(new Celula().establecerVivo(), x, y)
+
+                }
+       
+    Any live cell with fewer than two live neighbours dies, as if caused by underpopulation. // 
+    Any live cell with more than three live neighbours dies, as if by overcrowding.
+    Any live cell with two or three live neighbours lives on to the next generation.
+    Any dead cell with exactly three live neighbours becomes a live cell.
+                */
+
+        if (celulasVivas < 2 || celulasVivas > 3) {
             this.cambiarEstadoDeCelula(new Celula().establecerMuerto(), x, y)
-
-        } else if ((this.tablero.matriz[x][y] == new Celula().establecerVivo()) && (celulasVivas == 2 || celulasVivas == 3)) {
-            this.cambiarEstadoDeCelula(new Celula().establecerVivo(), x, y)
-
-        } else
-        if ((this.tablero.matriz[x][y] == new Celula().establecerMuerto()) && celulasVivas == 3) {
-            this.cambiarEstadoDeCelula(new Celula().establecerVivo(), x, y)
-
         }
+
+        if ((this.tablero.matriz[x][y] == new Celula().establecerMuerto() && celulasVivas == 3) || celulasVivas == 3) {
+            this.cambiarEstadoDeCelula(new Celula().establecerVivo(), x, y)
+        }
+
+
 
         return this.tablero.matrizSiguiente
     }
